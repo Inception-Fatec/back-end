@@ -28,9 +28,7 @@ jobs:
         run: npx eslint . --ext .js,.ts,.json
 
       - name: Prettify code
-        uses: creyD/prettier_action@v4.6
-        with:
-          prettier_options: --write **/*.{js,ts,tsx}
+        run: npx prettier --write .
 
       - name: Run NPM Start
         run: npm run start

@@ -2,6 +2,12 @@
 build
 coverage
 
-# Don't format package manifests in CI
 package.json
 package-lock.json
+
+ci.yml
+docker-compose.yml
+eslint.config.ts
+README.md
+.prettierrc
+

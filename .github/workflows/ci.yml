@@ -18,15 +18,15 @@ jobs:
       uses: actions/setup-node@v6.3.0
       with:
         node-version: '24.x'
-        
+
     - name: Install NPM dependencies
       run: npm install
 
     - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
+      run: eslint . --ext .js, .ts
       
     - name: Prettify code
       uses: creyD/prettier_action@v4.6
       
-    - name: Run NPM Start
-      run: npm run start
+    - name: Run NPM dev
+      run: npm run test

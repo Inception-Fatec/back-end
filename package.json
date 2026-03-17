@@ -13,9 +13,16 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "prettier": "3.8.1"
+    "@eslint/css": "^1.0.0",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^1.1.0",
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0",
+    "prettier": "3.8.1",
+    "typescript-eslint": "^8.57.1"
   },
   "dependencies": {
-    "eslint-config-prettier": "^10.1.8"
+    "eslint-config-prettier": "^10.1.8",
+    "jiti": "^2.6.1"
   }
 }

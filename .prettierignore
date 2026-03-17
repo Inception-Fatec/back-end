@@ -1,0 +1,13 @@
+# Ignore artifacts:
+build
+coverage
+
+package.json
+package-lock.json
+
+ci.yml
+docker-compose.yml
+eslint.config.ts
+README.md
+.prettierrc
+

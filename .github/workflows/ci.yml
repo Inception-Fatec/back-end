@@ -29,6 +29,3 @@ jobs:
 
       - name: Prettify code
         run: npx prettier --write .
-
-      - name: Run NPM Start
-        run: npm run start

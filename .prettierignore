@@ -6,8 +6,12 @@ package.json
 package-lock.json
 
 ci.yml
+test.yml
 docker-compose.yml
 eslint.config.ts
 README.md
 .prettierrc
+
+pnpm-lock.yaml
+pnpm-workspace.yaml 
 

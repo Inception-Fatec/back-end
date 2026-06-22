@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,3 +25,12 @@ jobs:
 
       - name: Run Pytest
         run: pytest
+        env:
+          JIRA_URL:      ${{ secrets.JIRA_URL }}
+          JIRA_EMAIL:    ${{ secrets.JIRA_EMAIL }}
+          JIRA_TOKEN:    ${{ secrets.JIRA_TOKEN }}
+          JIRA_PROJECT:  ${{ secrets.JIRA_PROJECT }}
+          SPRINT_NAME:   ${{ secrets.SPRINT_NAME }}
+          GITHUB_TOKEN:  ${{ secrets.GH_TOKEN }}
+          DISCORD_BOT_TOKEN: fake-token-for-tests
+          GUILD_ID: "0"

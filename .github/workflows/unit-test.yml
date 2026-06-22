@@ -26,11 +26,11 @@ jobs:
       - name: Run Pytest
         run: pytest
         env:
-          JIRA_URL:      ${{ secrets.JIRA_URL }}
-          JIRA_EMAIL:    ${{ secrets.JIRA_EMAIL }}
-          JIRA_TOKEN:    ${{ secrets.JIRA_TOKEN }}
-          JIRA_PROJECT:  ${{ secrets.JIRA_PROJECT }}
-          SPRINT_NAME:   ${{ secrets.SPRINT_NAME }}
-          GITHUB_TOKEN:  ${{ secrets.GH_TOKEN }}
+          JIRA_URL: https://test.atlassian.net
+          JIRA_EMAIL: test@test.com
+          JIRA_TOKEN: fake-token
+          JIRA_PROJECT: SCRUM
+          SPRINT_NAME: Sprint 4
+          GITHUB_TOKEN: fake-github-token
           DISCORD_BOT_TOKEN: fake-token-for-tests
           GUILD_ID: "0"

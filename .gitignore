@@ -6,3 +6,5 @@ __pycache__/
 .pytest_cache/
 venv/
 .env
+jira_state.json
+.coverage

@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,3 +25,12 @@ jobs:
 
       - name: Run Pytest
         run: pytest
+        env:
+          JIRA_URL: https://test.atlassian.net
+          JIRA_EMAIL: test@test.com
+          JIRA_TOKEN: fake-token
+          JIRA_PROJECT: SCRUM
+          SPRINT_NAME: Sprint 4
+          GITHUB_TOKEN: fake-github-token
+          DISCORD_BOT_TOKEN: fake-token-for-tests
+          GUILD_ID: "0"

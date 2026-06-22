@@ -291,7 +291,8 @@ def get_sprint_id():
 
     sprints = r.json().get("values", [])
     for sprint in sprints:
-        if SPRINT_NAME.lower() in sprint.get("name", "").lower():
+        # Use exact-name match (case-insensitive, trimmed) to avoid partial matches
+        if sprint.get("name", "").strip().lower() == SPRINT_NAME.strip().lower():
             return sprint["id"]
 
     print(f"  [AVISO] Sprint '{SPRINT_NAME}' não encontrada. Sprints disponíveis:")
@@ -408,7 +409,8 @@ def get_sprint_dates():
         return None, None
 
     for sprint in r.json().get("values", []):
-        if SPRINT_NAME.lower() in sprint.get("name", "").lower():
+        # Match sprint name exactly (case-insensitive, trimmed)
+        if sprint.get("name", "").strip().lower() == SPRINT_NAME.strip().lower():
             start = dateparser.parse(sprint["startDate"]) if sprint.get("startDate") else None
             end   = dateparser.parse(sprint["endDate"])   if sprint.get("endDate")   else None
             if start and start.tzinfo is None:
